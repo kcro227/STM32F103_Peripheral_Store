@@ -1,5 +1,5 @@
 # 介绍
-## 该项目是STM32F103使用HAL库对UART1配置DMA IDEL中断接受的例程
+该项目是STM32F103使用HAL库对UART1配置DMA IDEL中断接受的例程
 
 # 配置
 > - 1.创建工程，使用STM32cubeMX新建工程，配置串口1为异步串口模式，开启接受DMA，生成代码
