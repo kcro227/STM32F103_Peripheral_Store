@@ -3,7 +3,13 @@
 
 # 配置
 > - 1.创建工程，使用STM32cubeMX新建工程，配置串口1为异步串口模式，开启接受DMA，生成代码
-> - 2.在项目代码的usart.c中定义接收缓存，在main函数中加入如下代码：
+> - 2.在项目代码的usart.c中定义接收缓存:
+>   ```
+>    #define RECE_BUFF_MAX 255  //接收缓存的大小
+>     uint8_t rece_BUFF[RECE_BUFF_MAX];
+>   ```
+>
+>   在main函数中加入如下代码：
 >   ```
 >     __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);//开启IDEL中断
 >     HAL_UART_Receive_DMA(&huart1, rece_BUFF, RECE_BUFF_MAX);//使能接受
