@@ -56,7 +56,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t rece_BUFF[RECE_BUFF_MAX];
+uint8_t rece_BUFF[RECE_BUFF_MAX];//数据接收缓存
 /* USER CODE END 0 */
 
 /**

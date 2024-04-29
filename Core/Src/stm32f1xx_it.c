@@ -249,7 +249,7 @@ void USART1_IRQHandler(void)
 
       HAL_UART_Transmit(&huart1,rece_BUFF,Data_Length,200);//数据回传
 
-      memset(rece_BUFF,0,Data_Length);
+      memset(rece_BUFF,0,Data_Length);//将接收缓存清空
 
       HAL_UART_Receive_DMA(&huart1, rece_BUFF, RECE_BUFF_MAX);//使能接受
 

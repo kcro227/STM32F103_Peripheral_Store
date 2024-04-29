@@ -9,7 +9,7 @@
 >   ```
 >   在usart.h 中加入：
 >   ```
->    #define RECE_BUFF_MAX
+>    #define RECE_BUFF_MAX 255 //自定义缓存大小
 >    extren uint8_t rece_BUFF[RECE_BUFF_MAX];
 >   ```
 >   在main函数中加入如下代码：
@@ -34,11 +34,6 @@
 >
 >   }
 >   ```
->   在开头#include memory.h,并将
->   ```
->    #define RECE_BUFF_MAX 255
->    extern uint8_t rece_BUFF[RECE_BUFF_MAX];
->    ```
->    添加进来
+>   在stm32f1xx_it.c中包含memory.h或者string.h、和usart.h
 
 至此，配置结束
